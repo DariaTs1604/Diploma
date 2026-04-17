@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="48745318-f6a2-46df-a8ae-b6eb00fd88ad">
+  <name>Сервис</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервис</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>InformationRegister.BKM_ГрафикиРабот</content>
+  <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
+  <content>DataProcessor.ВКМ_ЗаполнениеГрафика</content>
+  <parentSubsystem>Subsystem.ВКМ_ЗарплатаИКадры</parentSubsystem>
+</mdclass:Subsystem>

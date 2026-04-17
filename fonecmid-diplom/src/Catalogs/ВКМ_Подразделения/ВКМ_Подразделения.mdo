@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cc24a012-511b-4f55-b933-0789153af9dc">
+  <producedTypes>
+    <objectType typeId="74efcf0d-f7ba-4dfe-aa6a-7e93a349af08" valueTypeId="5baee122-892b-40e1-adf5-9f6e4933f73a"/>
+    <refType typeId="a4da0a38-a1ca-4b08-bebc-61cdb80a050f" valueTypeId="6c2cab6b-56f0-4021-ae3b-3fd55e4099fa"/>
+    <selectionType typeId="a72c66d4-885b-4f97-8fd2-06e3c7ab9e61" valueTypeId="3aae047e-41ad-4383-8b42-491e76d78d3a"/>
+    <listType typeId="327f03f4-8e1a-4134-8415-168a7980cade" valueTypeId="b8c8f26d-e75e-48d4-9bbe-19a1572c1d57"/>
+    <managerType typeId="b76976f7-9deb-4770-a03b-36896f252a8d" valueTypeId="315326b7-323d-4df9-8544-814d9d5ebfb0"/>
+  </producedTypes>
+  <name>ВКМ_Подразделения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подразделения</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВКМ_Подразделения.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВКМ_Подразделения.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Подразделение</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="7f3611fc-5e80-474e-86df-8cc083180db6">
+      <name>АдминистративныйПерсонал</name>
+      <description>Административный персонал</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+    <items id="0564c4ed-847e-4e2b-838e-3d0faad0ee9e">
+      <name>Специалисты</name>
+      <description>Специалисты</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

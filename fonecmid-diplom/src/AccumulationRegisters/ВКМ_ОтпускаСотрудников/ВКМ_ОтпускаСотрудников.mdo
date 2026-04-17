@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6bc9fb4-a14d-456a-9746-34a3c34c97fc">
+  <producedTypes>
+    <selectionType typeId="61c995a8-4373-4eaa-963e-1217c44cbcbe" valueTypeId="0ba5725e-ffd8-4430-bb83-b7bba6d31eec"/>
+    <listType typeId="9989404a-7868-4353-9c26-fe21d63bf5e9" valueTypeId="9c66360e-3262-4b24-89e6-50c7cab3ff33"/>
+    <managerType typeId="95a15de5-076e-4011-bd8b-14f36212ac0c" valueTypeId="8ec63bdf-5fba-4d0e-8e57-53eb975061fe"/>
+    <recordSetType typeId="41ba78b1-3ed3-4433-81e2-76e9e9ea8b64" valueTypeId="47b4b8ce-4c42-4d11-9ab3-b76564022170"/>
+    <recordKeyType typeId="a135eec1-d707-4909-a060-6fb43edea5a5" valueTypeId="8ee300d2-dc2b-4b28-819f-b560c050268d"/>
+    <recordType typeId="e2651ee6-db9b-4284-a441-ad8c08d7bbd9" valueTypeId="db391c62-9182-408b-b7a2-bdeebdf4c949"/>
+  </producedTypes>
+  <name>ВКМ_ОтпускаСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отпуска сотрудников</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="7af76836-87bb-4708-9d11-81845721aeea">
+    <name>ПродолжительностьОтпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продолжительность отпуска</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="e1d9dd87-73d3-49da-b0b4-b33a421d7e72">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВКМ_Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

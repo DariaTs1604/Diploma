@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>InformationRegister.BKM_ГрафикиРабот.StandardCommand.OpenList</commands>
+      <commands>InformationRegister.ВКМ_УсловияОплатыСотрудников.StandardCommand.OpenList</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>ActionsPanelTools</group>
+      <commands>DataProcessor.ВКМ_ЗаполнениеГрафика.StandardCommand.Open</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

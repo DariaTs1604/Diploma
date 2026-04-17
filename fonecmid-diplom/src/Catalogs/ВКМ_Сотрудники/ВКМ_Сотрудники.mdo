@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6c76253-1374-4bed-bd33-9d67075c5cf6">
+  <producedTypes>
+    <objectType typeId="47a559cc-e1a0-4800-9d27-e73f6b511862" valueTypeId="c9b1cdbc-c30d-4016-b641-2b69060f2f92"/>
+    <refType typeId="351e1467-d595-4012-990d-c6d691e167d5" valueTypeId="e4ef9286-bb2c-4ae5-8dc9-e3b06ac0d0b8"/>
+    <selectionType typeId="397799dc-f795-498f-9238-b91af57e0fac" valueTypeId="66c6eb75-3900-4375-a5cb-18b88fde3e77"/>
+    <listType typeId="5bb261e3-86f5-4b7e-a5d2-f9359aeb521e" valueTypeId="e6c238cf-e7cd-4559-a96d-4f1b6ae9d885"/>
+    <managerType typeId="a4bf88c7-5e72-4bb6-b7fc-edfde0c42f6e" valueTypeId="8f83bfcd-f488-4cbb-a55b-8185182d3f2a"/>
+  </producedTypes>
+  <name>ВКМ_Сотрудники</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сотрудники</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Сотрудник</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="e430b72e-5cf9-48c3-a875-6e03f0fb91f0">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВКМ_Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>
