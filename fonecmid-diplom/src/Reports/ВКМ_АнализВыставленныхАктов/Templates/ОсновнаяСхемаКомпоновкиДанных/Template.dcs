@@ -21,16 +21,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>[Сумма к оплате]</dataPath>
-			<field>СуммаКОплате</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма к оплате</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>[Сумма по выставленным актам]</dataPath>
 			<field>СуммаПоВыставленнымАктам</field>
 			<title xsi:type="v8:LocalStringType">
@@ -40,18 +30,51 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АбоненскаяПлата</dataPath>
+			<field>АбоненскаяПлата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонентская плата</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОбслуживаний</dataPath>
+			<field>СуммаОбслуживаний</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма обслуживаний</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент КАК Клиент,
 	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор КАК Договор,
-	СУММА(ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеПриход) КАК СуммаКОплате,
-	СУММА(ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеРасход) КАК СуммаПоВыставленнымАктам
+	СУММА(ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеРасход) КАК СуммаПоВыставленнымАктам,
+	СУММА(ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеПриход) КАК СуммаОбслуживаний,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор.ВКМ_АбоненскаяПлата КАК АбоненскаяПлата
 ИЗ
 	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(, , Месяц, ) КАК ВКМ_ВыполненныеКлиентуРаботыОбороты
 
 СГРУППИРОВАТЬ ПО
 	ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент,
-	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор</query>
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор.ВКМ_АбоненскаяПлата</query>
 	</dataSet>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -70,6 +93,7 @@
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;Период.ДатаНачала</expression>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>КонецПериода</name>
@@ -88,6 +112,7 @@
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;Период.ДатаОкончания</expression>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>Период</name>
@@ -104,6 +129,7 @@
 			<v8:variant xsi:type="v8:StandardPeriodVariant">Month</v8:variant>
 		</value>
 		<useRestriction>false</useRestriction>
+		<use>Always</use>
 	</parameter>
 	<template>
 		<name>Макет1</name>
@@ -167,7 +193,12 @@
 	</groupTemplate>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Анализ выставленных актов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -177,7 +208,16 @@
 					<dcsset:field>Договор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>[Сумма к оплате]</dcsset:field>
+					<dcsset:field>АбоненскаяПлата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОбслуживаний</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма обслуживаний</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>[Сумма по выставленным актам]</dcsset:field>

@@ -61,6 +61,7 @@
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПЕРИОД.ДатаНачала</expression>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>КонецПериода</name>
@@ -79,6 +80,7 @@
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПЕРИОД.ДатаОкончания</expression>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>Период</name>
@@ -93,7 +95,7 @@
 		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
-		<availableAsField>false</availableAsField>
+		<use>Always</use>
 	</parameter>
 	<template>
 		<name>Макет1</name>
@@ -179,7 +181,7 @@
 		<template>Макет1</template>
 	</groupTemplate>
 	<settingsVariant>
-		<dcsset:name>Расход запланированных отпусков</dcsset:name>
+		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
